@@ -1,5 +1,5 @@
 import json
-from tracker import  ExpenseTracker
+from tracker import  ExpenseTracker,Expense
 import json
 from tracker import Expense
 
@@ -15,3 +15,4 @@ class Storage:
             data = json.load(f)
         # Convert each dict back to Expense object
         return [Expense(**item) for item in data]
+
