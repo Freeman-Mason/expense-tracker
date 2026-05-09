@@ -12,7 +12,12 @@ class Expense:
     def __repr__(self):
 
         return f"Expense({self.amount}, {self.category}, {self.date}, {self.description})"
-
+    def to_dict(self):
+        return {"amount": self.amount,
+                "category": self.category,
+                "date": self.date,
+                "description": self.description
+                }
 class ExpenseTracker:
     def __init__(self):
         self.expenses = []
@@ -24,6 +29,9 @@ class ExpenseTracker:
         self.expenses.append(expense)
 
     def get_all_expenses(self):
+
+
+
         return self.expenses
 
     def get_total(self):
@@ -38,3 +46,6 @@ class ExpenseTracker:
             if expense.category == category:
                 result.append(expense)
         return result
+
+
+
