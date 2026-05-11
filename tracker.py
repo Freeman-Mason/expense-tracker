@@ -12,6 +12,8 @@ class Expense:
     def __repr__(self):
 
         return f"Expense({self.amount}, {self.category}, {self.date}, {self.description})"
+
+
     def to_dict(self):
         return {"amount": self.amount,
                 "category": self.category,
