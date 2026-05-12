@@ -9,7 +9,7 @@ try:
     loaded = storage.load("expenses.json")
     for expense in loaded:
         tracker.add_expense(expense)
-        storage.save(tracker.get_all_expenses(), "expenses.json")
+
 except FileNotFoundError:
     pass  # no existing file, start fresh
 
